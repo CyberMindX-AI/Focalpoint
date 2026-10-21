@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Focalpoint",
+    "slug": "pastq",
+    "owner": "wealthdigitals",
+    "scheme": "pastq",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#151515",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pastq.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Focalpoint uses the camera to photograph study materials.",
+        "NSPhotoLibraryUsageDescription": "Focalpoint uses your photos to upload study materials.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.pastq.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#151515",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Focalpoint uses your photos to upload study materials.",
+          "cameraPermission": "Focalpoint uses the camera to photograph study materials."
+        }
+      ],
+      "expo-secure-store",
+      "expo-font",
+      "expo-web-browser",
+      "expo-splash-screen",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Focalpoint uses the camera to photograph study materials.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "faf04cf6-2092-4bd1-ac9f-ac4382b231e3"
+      }
+    }
+  }
+}
